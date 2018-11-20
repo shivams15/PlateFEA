@@ -5,15 +5,14 @@
 
 class FEMSolver{
 private:
-	Vec u, sxx, syy, sxy;
-	Vec f, fxx, fyy, fxy;
-	Mat K, L; 
-	KSP uSolver;
-	KSP sSolver;
+	Vec u, sxx, syy, sxy;		//Solution vectors for displacements and stresses
+	Vec f, fxx, fyy, fxy;		//Nodal force vectors
+	Mat K, L;					//Stiffness matrices 
+	KSP uSolver;				//KSP solver for displacements
+	KSP sSolver;				//KSP solver for stresses
 	Grid *grid;
-	double nu;
-	double sigma_x;
-	double E;
+	double nu;					//Poisson's ratio
+	double E;					//Young's modulus
 	void SolverSetup();
 	void ExportData();
 	void AssembleStiffnessMatrix();

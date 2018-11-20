@@ -19,14 +19,14 @@ struct Element{
 
 class Grid{
 private:
-	double l;
-	double w ;
-	int nr;
-	int na;
+	double l;		//length of plate
+	double w ;		//plate width		
+	int nr;			//number of elements in radial direction
+	int na;			//half of the number of elements in the angular direction
 	void SetupGrid();
 public:
-	int m;
-	int n;
+	int m;			//total number of elements
+	int n;			//total number of nodes
 	Point *pts;
 	Element *eList;
 	Grid(int nr, int na, double w);
