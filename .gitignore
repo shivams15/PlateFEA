@@ -1,0 +1,5 @@
+*.out 
+*.o
+main
+*.csv
+*.csv#
